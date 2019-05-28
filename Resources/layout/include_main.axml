@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<FrameLayout
+		android:layout_height="fill_parent"
+		android:layout_width="fill_parent"
+		android:background="@color/uberAsh">
+
+		<fragment
+			android:id="@+id/map"
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			class="com.google.android.gms.maps.SupportMapFragment"
+		/>
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/mainToolbar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:minHeight="?android:attr/actionBarSize"
+		/>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:layout_marginLeft="16dp"
+			android:layout_marginRight="16dp"
+			android:layout_marginTop="70dp">
+
+			<FrameLayout
+				android:id="@+id/frameLocations"
+				android:layout_width="match_parent"
+				android:layout_height="90dp"
+				android:background="@drawable/roundedges"
+				>
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_height="match_parent"
+					android:layout_width="match_parent">
+
+					<RelativeLayout
+						android:layout_height="0dp"
+						android:layout_width="match_parent"
+						android:clickable="true"
+						android:layout_weight="0.5"
+						android:id="@+id/layoutPickUp">
+
+						<ImageView
+						android:layout_height="8dp"
+							android:layout_width="8dp"
+							android:src="@drawable/greenball"
+							android:layout_centerVertical="true"
+							android:layout_marginLeft="10dp"
+						/>
+
+						<TextView
+						android:id="@+id/pickupLocationText"
+							android:layout_height="wrap_content"
+							android:layout_width="match_parent"
+							android:text="Pickup Location"
+							android:layout_centerVertical="true"
+							android:layout_marginLeft="30dp"
+							android:maxLines="2"
+							android:gravity="center_vertical"
+							android:layout_marginRight="36dp"
+							
+						/>
+
+						<RadioButton
+						android:id="@+id/pickupRadio"
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:layout_gravity="end"
+							android:layout_alignParentRight="true"
+							android:layout_centerVertical="true"
+							android:layout_marginRight="10dp"
+						/>
+
+						<View
+							android:layout_height="1dp"
+							android:layout_width="match_parent"
+							android:layout_gravity="end"
+							android:layout_alignParentBottom="true"
+							android:background="@color/uberAsh"
+						/>
+						</RelativeLayout>
+
+
+						<RelativeLayout
+						android:layout_height="0dp"
+						android:layout_width="match_parent"
+						android:clickable="true"
+						android:layout_weight="0.5"
+						android:id="@+id/layoutDestination">
+
+						<ImageView
+						android:layout_height="8dp"
+							android:layout_width="8dp"
+							android:src="@drawable/redball"
+							android:layout_centerVertical="true"
+							android:layout_marginLeft="10dp"
+						/>
+
+						<TextView
+						android:id="@+id/destinationText"
+							android:layout_height="wrap_content"
+							android:layout_width="match_parent"
+							android:text="Destination"
+							android:layout_centerVertical="true"
+							android:layout_marginLeft="30dp"
+							android:maxLines="2"
+							android:gravity="center_vertical"
+							android:layout_marginRight="36dp"
+							
+						/>
+
+						<RadioButton
+						android:id="@+id/DestinationRadio"
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:layout_gravity="end"
+							android:layout_alignParentRight="true"
+							android:layout_centerVertical="true"
+							android:layout_marginRight="10dp"
+						/>
+						</RelativeLayout>
+
+					</LinearLayout>
+				</FrameLayout>
+				
+			</LinearLayout>
+
+		
+		<ImageView
+			android:id="@+id/centerMarker"
+			android:layout_height="60dp"
+			android:layout_width="60dp"
+			android:layout_gravity="center"
+			android:src="@drawable/greenmarker"/>
+
+		<RelativeLayout
+			
+			android:layout_height="35dp"
+			android:layout_width="35dp"
+			android:clickable="true"
+			android:id="@+id/mylocation"
+			android:layout_gravity="center|right"
+			android:background="@drawable/roundedges"
+			android:layout_marginRight="16dp"
+			
+			>
+
+			<ImageView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:tint="@color/uberAccentColor"
+				android:padding="5dp"
+				android:src="@mipmap/ic_my_location_black_48dp"
+			/>
+
+			</RelativeLayout>
+
+
+		<Button
+			android:id="@+id/favouritePlacesButton"
+			android:layout_height="40dp"
+			android:layout_width="200dp"
+			android:text="My Favourite Places"
+			android:layout_gravity="center|bottom"
+			android:layout_marginBottom="30dp"
+			android:textAllCaps="false"
+			android:drawableLeft="@drawable/ic_action_favwhite"
+			android:paddingLeft="10dp"
+			android:paddingRight="12dp"
+			android:paddingBottom="8dp"
+			android:paddingTop="8dp"
+			android:elevation="2dp"
+			android:translationZ="2dp"
+			android:background="@drawable/uberroundbutton"
+			android:textColor="@color/uberwhite"/>
+            
+            <Button
+            android:id="@+id/locationsSetButton"
+            android:layout_height="40dp"
+            android:layout_width="200dp"
+            android:text="Done"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="30dp"
+            android:textAllCaps="false"
+            android:paddingLeft="10dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:elevation="2dp"
+            android:translationZ="2dp"
+            android:visibility="invisible"
+            android:background="@drawable/uberroundbutton"
+            android:textColor="@color/uberwhite"/>
+
+		</FrameLayout>
+    
+    <include layout="@layout/tripdetails"/>
+    <include layout="@layout/rideinfo"/>
+    
+
+</android.support.design.widget.CoordinatorLayout>

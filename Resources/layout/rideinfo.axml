@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+ <FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+        android:id="@+id/bottom_sheet_trip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+ 
+    
+ <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+        android:layout_gravity="top"
+    android:background="@color/uberAsh"/>
+    
+    
+       <LinearLayout 
+    
+   
+        android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="160dp"
+              android:background="#fff"
+              android:padding="16dp">
+    
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="0.5">
+            
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="match_parent">
+                
+                <TextView
+                    android:id="@+id/driverNameText"
+                android:text="Ufinix Academy"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+                
+               <TextView
+                    android:id="@+id/tripStatusText"
+                android:text="On Trip"
+                    android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+                
+            </LinearLayout>
+            
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3">
+                
+                
+                
+                <ImageButton
+                     android:id="@+id/callDriverButton"
+                   android:layout_toLeftOf="@+id/cancelTripButton"
+                    android:layout_centerVertical="true"
+                    android:layout_height="40dp"
+                    android:layout_width="40dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/roundedges"
+                    android:tint="@color/uberAccentColor"
+                 android:src="@drawable/ic_call_black_48dp"
+                    android:scaleType="centerCrop" />
+               
+                
+                
+                  <ImageButton
+                    android:id="@+id/cancelTripButton"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="40dp"
+                    android:layout_width="40dp"
+                    android:padding="10dp"
+                    android:background="@drawable/roundedges"
+                    android:tint="@color/uberAccentColor"
+                    android:src="@drawable/ic_clear_black_48dp"
+                    android:scaleType="centerCrop" />
+               
+                
+            </RelativeLayout>
+            
+        </LinearLayout>
+   
+    
+    <RelativeLayout
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:layout_width="match_parent">
+            
+            <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+    android:background="@color/uberAsh"/>
+            
+           <Button
+            android:id="@+id/requestDriverButton"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:text="Get Directions"
+            android:textAllCaps="false"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="12dp"
+            android:translationZ="2dp"
+              android:elevation="2dp"
+            android:textColor="@color/uberwhite"
+            android:background="@drawable/uberroundbutton" 
+                android:layout_alignParentBottom="true"
+            />
+            
+            
+        </RelativeLayout>
+   
+        
+    </LinearLayout>
+ 
+    </FrameLayout>

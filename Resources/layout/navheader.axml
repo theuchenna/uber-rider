@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+	android:background="@color/uberwhite"
+	android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+	
+
+	<Refractored.Controls.CircleImageView
+		android:id="@+id/accountImage"
+		android:layout_height="100dp"
+		android:layout_width="100dp"
+		android:layout_gravity="center"
+		android:src="@drawable/account"
+		android:scaleType="centerCrop"
+		/>
+
+	
+		<TextView
+		android:id="@+id/accountTitle"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="12sp"
+		android:text="Username"
+		android:textColor="@color/uberPrimary"
+		android:layout_marginBottom="12dp"
+		android:layout_gravity="bottom"
+		android:gravity="center" />
+		
+
+
+	<View
+		android:layout_height="1dp"
+		android:layout_width="match_parent"
+		android:layout_gravity="bottom"
+		android:background="@color/uberAsh"
+		/>
+</FrameLayout>
